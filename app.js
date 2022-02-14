@@ -22,5 +22,5 @@ mongoose.connection.on("open",()=>{
     console.log("mongodb is connected!!");
 });
 mongoose.connect(process.env.DB_ROOT)
-.then(res => app.listen(3000))
+.then(res => app.listen(process.env.PORT || 3000))
 .catch(err => console.log(err));
