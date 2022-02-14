@@ -15,7 +15,7 @@ exports.getData = (req, res, next) => {
 };
 
 exports.addData = (req, res, next) => {
-  const { name, price, country } = req.body;
+  const { product, price, country } = req.body;
   // #swagger.description = 'Create new todo'
   /* #swagger.parameters['text'] = {
     in: 'body',
@@ -28,7 +28,7 @@ exports.addData = (req, res, next) => {
       description: 'Array of new todos',
       schema: { $ref: '#/definitions/Produts' }
   } */
-  Data.create({ name, price, country })
+  Data.create({ product, price, country })
     .then(data => res.json(data))
     .catch(err => console.log(err))
 }

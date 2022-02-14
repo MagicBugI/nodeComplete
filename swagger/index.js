@@ -38,7 +38,7 @@ const doc = {
         country: "USA"
     }
   },
-  host: 'localhost:3000',
+  host: 'localhost:5000',
   schemes: ['http']
 }
 
